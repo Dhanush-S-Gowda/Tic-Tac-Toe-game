@@ -78,12 +78,12 @@ const checkwinner = () =>{
                     let winner = document.querySelector(".result");
                     if(box1 === "X"){
                          winner.innerText = "Player 1 (X) has won";
-                         const randomMess = winmess[Math.floor(Math.random() * winmess.length)];
+                         const randomMess = winmess[parseInt(Math.random() * winmess.length)];
                          winner.innerHTML = winner.innerText + `<br><i>${randomMess}</i>`;
                     }
                     else{
                          winner.innerText = "Player 2 (O) has won";
-                         const randomMess = winmess[Math.floor(Math.random() * winmess.length)];
+                         const randomMess = winmess[parseInt(Math.random() * winmess.length)];
                          winner.innerHTML = winner.innerText + `<br><i>${randomMess}</i>`;
                     }
                     
@@ -141,12 +141,12 @@ function splayer(){
                          let winner = document.querySelector(".result");
                          if(box1 === "X"){
                               winner.innerText = "You have won";
-                              const randomMess = winmess[Math.floor(Math.random() * winmess.length)];
+                              const randomMess = winmess[parseInt(Math.random() * winmess.length)];
                               winner.innerHTML = winner.innerText + `<br><i>${randomMess}</i>`;
                          }
                          else{
                               winner.innerText = "Computer has won";
-                              const randomMess = losemess[Math.floor(Math.random() * losemess.length)];
+                              const randomMess = losemess[parseInt(Math.random() * losemess.length)];
                               winner.innerHTML = winner.innerText + `<br><i>${randomMess}</i>`;
                          }
                          
