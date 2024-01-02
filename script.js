@@ -140,7 +140,7 @@ function splayer(){
                     if(box1 == box2 && box2 == box3){
                          let winner = document.querySelector(".result");
                          if(box1 === "X"){
-                              winner.innerText = "Player 1 (X) has won";
+                              winner.innerText = "You have won";
                               const randomMess = winmess[Math.floor(Math.random() * winmess.length)];
                               winner.innerHTML = winner.innerText + `<br><i>${randomMess}</i>`;
                          }
