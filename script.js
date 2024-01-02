@@ -130,8 +130,11 @@ function splayer(){
           
           box.innerText = "X";
           if(cmove!= undefined){
-             boxes[cmove].innerText = "O";  
+             boxes[cmove].innerText = "O"; 
+             boxes[cmove].disabled = true; 
           }
+          
+          box.disabled = true;
           for (const i of winPattern) {
                let box1 = boxes[i[0]].innerText;
                let box2 = boxes[i[1]].innerText;
@@ -156,7 +159,7 @@ function splayer(){
                     
                }
           }
-          box.disabled = true; 
+           
           })
           
       });
