@@ -68,6 +68,11 @@ function refresh(){
           location.reload();
      })
 }
+const disable = () =>{
+     boxes.forEach(e => {
+          e.disabled = true;
+     });
+}
 const checkwinner = () =>{
      for (const i of winPattern) {
           let box1 = boxes[i[0]].innerText;
@@ -80,11 +85,13 @@ const checkwinner = () =>{
                          winner.innerText = "Player 1 (X) has won";
                          const randomMess = winmess[parseInt(Math.random() * winmess.length)];
                          winner.innerHTML = winner.innerText + `<br><i>${randomMess}</i>`;
+                         disable();
                     }
                     else{
                          winner.innerText = "Player 2 (O) has won";
                          const randomMess = winmess[parseInt(Math.random() * winmess.length)];
                          winner.innerHTML = winner.innerText + `<br><i>${randomMess}</i>`;
+                         disable();
                     }
                     
                     audio.volume = 0.5;
@@ -146,11 +153,13 @@ function splayer(){
                               winner.innerText = "You have won";
                               const randomMess = winmess[parseInt(Math.random() * winmess.length)];
                               winner.innerHTML = winner.innerText + `<br><i>${randomMess}</i>`;
+                              disable();
                          }
                          else{
                               winner.innerText = "Computer has won";
                               const randomMess = losemess[parseInt(Math.random() * losemess.length)];
                               winner.innerHTML = winner.innerText + `<br><i>${randomMess}</i>`;
+                              disable();
                          }
                          
                          audio.volume = 0.5;
