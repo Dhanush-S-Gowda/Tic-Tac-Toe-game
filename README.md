@@ -24,6 +24,7 @@ Tic Tac Toe is a timeless paper-and-pencil game that has been converted into a d
 
 - Two game modes: Multiplayer and Single Player
 - Clean and intuitive interface
+- New accomplishment words every time you win or lose ;)
 - Responsive design: Play on any device, desktop or mobile
 - Built with modern technologies: HTML5, CSS3, JavaScript
 
